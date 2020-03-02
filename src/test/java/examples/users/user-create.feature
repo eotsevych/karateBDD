@@ -7,9 +7,9 @@ Feature: create user
     * def getEmail =
     """
     function() {
-      var UserHelper = Java.type('utils.UserHelper');
-      var helper = new UserHelper();
-      return helper.getRandomEmail();
+      var UserData = Java.type('utils.UserData');
+      var data = new UserData();
+      return data.getRandomEmail();
     }
     """
 
