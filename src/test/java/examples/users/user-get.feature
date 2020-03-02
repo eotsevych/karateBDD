@@ -1,4 +1,4 @@
-Feature: sample karate test script
+Feature: get users
   Background:
     * url baseUrl + '/public-api'
     * def auth = call read('auth.feature')
