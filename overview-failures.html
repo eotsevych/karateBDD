@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>/home/runner/work/karateBDD/karateBDD</td>
+      <td>11 Jul 2020, 16:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="elements">
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1_1522357000.html">examples/users/user-get.feature</a>
+    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.770</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">get users</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'users'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">0.697</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>16:01:42.211 request:
+1 &gt; GET https://gorest.co.in/public-api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer ePoR3hgXN1eum5FNht_nFLLutGkiAJKhTqM4
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_252)
+
+16:01:42.904 response time in milliseconds: 684.25
+1 &lt; 200
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=UTF-8
+1 &lt; Date: Sat, 11 Jul 2020 16:01:42 GMT
+1 &lt; Link: &lt;https://gorest.co.in/public-api/users?page=1&gt;; rel=self, &lt;https://gorest.co.in/public-api/users?page=2&gt;; rel=next, &lt;https://gorest.co.in/public-api/users?page=110&gt;; rel=last
+1 &lt; Server: nginx
+1 &lt; Set-Cookie: _csrf=7970c038154e6d91529cdb23121447de7cb7d05f25f301570354af9d28315c39a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LbmobON9q7GeSNBfVpVZrK1eA2J1ZdSv%22%3B%7D; path=/; HttpOnly
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Accept]
+1 &lt; X-Frame-Options: sameorigin
+1 &lt; X-Pagination-Current-Page: 1
+1 &lt; X-Pagination-Page-Count: 110
+1 &lt; X-Pagination-Per-Page: 20
+1 &lt; X-Pagination-Total-Count: 2192
+1 &lt; X-Rate-Limit-Limit: 30
+1 &lt; X-Rate-Limit-Remaining: 27
+1 &lt; X-Rate-Limit-Reset: 6
+{
+  &quot;_meta&quot;: {
+    &quot;success&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;message&quot;: &quot;OK. Everything worked as expected.&quot;,
+    &quot;totalCount&quot;: 2192,
+    &quot;pageCount&quot;: 110,
+    &quot;currentPage&quot;: 1,
+    &quot;perPage&quot;: 20,
+    &quot;rateLimit&quot;: {
+      &quot;limit&quot;: 30,
+      &quot;remaining&quot;: 27,
+      &quot;reset&quot;: 6
+    }
+  },
+  &quot;result&quot;: [
+    {
+      &quot;id&quot;: &quot;2113&quot;,
+      &quot;first_name&quot;: &quot;Selina&quot;,
+      &quot;last_name&quot;: &quot;Leuschke&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1950-10-03&quot;,
+      &quot;email&quot;: &quot;humberto.waelchi@example.net&quot;,
+      &quot;phone&quot;: &quot;(851) 252-4762&quot;,
+      &quot;website&quot;: &quot;https://www.funk.com/est-incidunt-quas-consectetur-possimus-ullam-excepturi-voluptas&quot;,
+      &quot;address&quot;: &quot;453 Bode Plaza\nMontanaside, NE 77251-0419&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2113&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2113&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?80155&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2114&quot;,
+      &quot;first_name&quot;: &quot;Loren&quot;,
+      &quot;last_name&quot;: &quot;Blick&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1986-05-14&quot;,
+      &quot;email&quot;: &quot;white.madisyn@example.net&quot;,
+      &quot;phone&quot;: &quot;(447) 517-0290&quot;,
+      &quot;website&quot;: &quot;http://www.schmitt.net/laboriosam-earum-nisi-eligendi-amet-sapiente&quot;,
+      &quot;address&quot;: &quot;6910 Predovic Springs\nLondonville, WY 15426-0807&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2114&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2114&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?35429&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2115&quot;,
+      &quot;first_name&quot;: &quot;Nathen&quot;,
+      &quot;last_name&quot;: &quot;Cummings&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1990-03-13&quot;,
+      &quot;email&quot;: &quot;padberg.toney@example.org&quot;,
+      &quot;phone&quot;: &quot;550-860-2697 x47470&quot;,
+      &quot;website&quot;: &quot;https://www.kihn.com/dolor-cumque-libero-rerum-ipsa&quot;,
+      &quot;address&quot;: &quot;34214 Kianna Plaza Apt. 509\nRobelport, IL 21339-9400&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2115&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2115&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?32382&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2116&quot;,
+      &quot;first_name&quot;: &quot;Warren&quot;,
+      &quot;last_name&quot;: &quot;Braun&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;2011-08-07&quot;,
+      &quot;email&quot;: &quot;jacobs.jevon@example.org&quot;,
+      &quot;phone&quot;: &quot;+14429818950&quot;,
+      &quot;website&quot;: &quot;http://www.turcotte.com/&quot;,
+      &quot;address&quot;: &quot;39715 Dickinson Fords\nDuBuquefort, WY 50324&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2116&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2116&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?31707&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2118&quot;,
+      &quot;first_name&quot;: &quot;Schuyler&quot;,
+      &quot;last_name&quot;: &quot;Hirthe&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;2006-08-31&quot;,
+      &quot;email&quot;: &quot;johnathon13@example.org&quot;,
+      &quot;phone&quot;: &quot;+1-286-588-2106&quot;,
+      &quot;website&quot;: &quot;http://orn.net/vel-excepturi-dolorem-ut-reiciendis-nulla-autem-qui&quot;,
+      &quot;address&quot;: &quot;49927 Krajcik Forge\nSpencerburgh, LA 55787-4542&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2118&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2118&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?31569&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2119&quot;,
+      &quot;first_name&quot;: &quot;Henry&quot;,
+      &quot;last_name&quot;: &quot;Goyette&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;2011-08-01&quot;,
+      &quot;email&quot;: &quot;julio49@example.org&quot;,
+      &quot;phone&quot;: &quot;445.412.1204&quot;,
+      &quot;website&quot;: &quot;http://fisher.com/dolor-dolores-sit-ab-at-consequuntur-voluptates-ad.html&quot;,
+      &quot;address&quot;: &quot;327 Francesco Street\nNorth Ozellashire, WI 42832&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2119&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2119&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?76367&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2120&quot;,
+      &quot;first_name&quot;: &quot;Karson&quot;,
+      &quot;last_name&quot;: &quot;Lueilwitz&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1925-02-07&quot;,
+      &quot;email&quot;: &quot;dashawn.hoppe@example.com&quot;,
+      &quot;phone&quot;: &quot;+1-987-677-4322&quot;,
+      &quot;website&quot;: &quot;http://www.ondricka.info/accusamus-repudiandae-aut-et-voluptates-doloribus-deserunt.html&quot;,
+      &quot;address&quot;: &quot;5471 Runolfsdottir Orchard\nNorth Daniellaberg, MS 78202-4593&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2120&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2120&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?58730&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2121&quot;,
+      &quot;first_name&quot;: &quot;Ibrahim&quot;,
+      &quot;last_name&quot;: &quot;Oberbrunner&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1991-08-15&quot;,
+      &quot;email&quot;: &quot;marisa21@example.net&quot;,
+      &quot;phone&quot;: &quot;(535) 514-5029 x401&quot;,
+      &quot;website&quot;: &quot;http://www.dach.com/soluta-aliquam-suscipit-ut-non-distinctio.html&quot;,
+      &quot;address&quot;: &quot;2090 Lindgren Lane Suite 466\nAmosbury, WV 96697-6804&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2121&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2121&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?25534&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2122&quot;,
+      &quot;first_name&quot;: &quot;Raina&quot;,
+      &quot;last_name&quot;: &quot;Wehner&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1939-11-24&quot;,
+      &quot;email&quot;: &quot;keanu.gerhold@example.com&quot;,
+      &quot;phone&quot;: &quot;989-657-9105 x466&quot;,
+      &quot;website&quot;: &quot;http://russel.com/debitis-provident-alias-corrupti-autem-molestiae.html&quot;,
+      &quot;address&quot;: &quot;15934 Lesch Plaza Apt. 216\nSchultzstad, LA 30708&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2122&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2122&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?75187&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2124&quot;,
+      &quot;first_name&quot;: &quot;Maye&quot;,
+      &quot;last_name&quot;: &quot;Veum&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1996-10-10&quot;,
+      &quot;email&quot;: &quot;nick.rippin@example.org&quot;,
+      &quot;phone&quot;: &quot;1-695-808-3207&quot;,
+      &quot;website&quot;: &quot;https://www.daniel.com/odit-nulla-est-porro-quia-est-explicabo-temporibus&quot;,
+      &quot;address&quot;: &quot;742 Ruecker Forges Suite 082\nSouth Georgette, WI 52030&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2124&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2124&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?99637&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2125&quot;,
+      &quot;first_name&quot;: &quot;Roy&quot;,
+      &quot;last_name&quot;: &quot;Hermann&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;2004-12-12&quot;,
+      &quot;email&quot;: &quot;cquigley@example.net&quot;,
+      &quot;phone&quot;: &quot;+16462042210&quot;,
+      &quot;website&quot;: &quot;https://halvorson.net/esse-ut-repellendus-aut-est-porro-aspernatur-distinctio-qui.html&quot;,
+      &quot;address&quot;: &quot;208 Chester Fall Apt. 376\nGlenport, WA 87655&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2125&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2125&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?91063&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2126&quot;,
+      &quot;first_name&quot;: &quot;Rocky&quot;,
+      &quot;last_name&quot;: &quot;Lubowitz&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1938-08-27&quot;,
+      &quot;email&quot;: &quot;rebeca.williamson@example.com&quot;,
+      &quot;phone&quot;: &quot;1-604-771-8601 x945&quot;,
+      &quot;website&quot;: &quot;http://runolfsson.com/molestiae-dolores-delectus-at-qui-saepe-distinctio-rem-soluta&quot;,
+      &quot;address&quot;: &quot;783 Amelia Tunnel Apt. 609\nJaskolskiburgh, GA 15370&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2126&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2126&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?20428&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2127&quot;,
+      &quot;first_name&quot;: &quot;Cornell&quot;,
+      &quot;last_name&quot;: &quot;Cole&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1938-01-10&quot;,
+      &quot;email&quot;: &quot;roberts.roma@example.net&quot;,
+      &quot;phone&quot;: &quot;(395) 618-9680 x94191&quot;,
+      &quot;website&quot;: &quot;http://www.rath.net/&quot;,
+      &quot;address&quot;: &quot;189 Lulu Street\nLake Crystalstad, KS 28716-7766&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2127&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2127&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?46270&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2128&quot;,
+      &quot;first_name&quot;: &quot;Emily&quot;,
+      &quot;last_name&quot;: &quot;Schultz&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1927-05-05&quot;,
+      &quot;email&quot;: &quot;anderson.mervin@example.net&quot;,
+      &quot;phone&quot;: &quot;404-850-1439 x33464&quot;,
+      &quot;website&quot;: &quot;http://www.carroll.com/provident-ut-in-quod.html&quot;,
+      &quot;address&quot;: &quot;7518 Leland Lodge\nSouth Justen, DE 87478-7136&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2128&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2128&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?17108&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2129&quot;,
+      &quot;first_name&quot;: &quot;Lora&quot;,
+      &quot;last_name&quot;: &quot;Yundt&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1923-07-18&quot;,
+      &quot;email&quot;: &quot;bmurphy@example.org&quot;,
+      &quot;phone&quot;: &quot;245.476.2721&quot;,
+      &quot;website&quot;: &quot;http://schmeler.com/sequi-quasi-corporis-minima-eius-occaecati-dolor-optio&quot;,
+      &quot;address&quot;: &quot;6014 Cartwright Brooks\nWatsicaton, CT 28040&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2129&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2129&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?90184&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2130&quot;,
+      &quot;first_name&quot;: &quot;Araceli&quot;,
+      &quot;last_name&quot;: &quot;Simonis&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;2013-11-27&quot;,
+      &quot;email&quot;: &quot;meagan53@example.org&quot;,
+      &quot;phone&quot;: &quot;+1-745-575-2881&quot;,
+      &quot;website&quot;: &quot;http://mayert.com/&quot;,
+      &quot;address&quot;: &quot;72192 Nikko Plains\nPort Emerson, ME 64048-8908&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2130&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2130&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?56226&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2132&quot;,
+      &quot;first_name&quot;: &quot;Jackeline&quot;,
+      &quot;last_name&quot;: &quot;Kerluke&quot;,
+      &quot;gender&quot;: &quot;female&quot;,
+      &quot;dob&quot;: &quot;1961-04-06&quot;,
+      &quot;email&quot;: &quot;purdy.ellie@example.org&quot;,
+      &quot;phone&quot;: &quot;(310) 316-6945 x65186&quot;,
+      &quot;website&quot;: &quot;http://wilderman.info/&quot;,
+      &quot;address&quot;: &quot;674 Luettgen Views Suite 480\nOndrickaland, NY 24514&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2132&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2132&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?84140&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2133&quot;,
+      &quot;first_name&quot;: &quot;Jordon&quot;,
+      &quot;last_name&quot;: &quot;Kovacek&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1927-06-03&quot;,
+      &quot;email&quot;: &quot;thalia37@example.org&quot;,
+      &quot;phone&quot;: &quot;1-347-339-0628&quot;,
+      &quot;website&quot;: &quot;http://mayert.net/id-enim-ipsam-possimus&quot;,
+      &quot;address&quot;: &quot;14361 Felicita Shoal\nHarberborough, OH 27343-2117&quot;,
+      &quot;status&quot;: &quot;inactive&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2133&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2133&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?92089&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2134&quot;,
+      &quot;first_name&quot;: &quot;Jett&quot;,
+      &quot;last_name&quot;: &quot;Denesik&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;2011-05-09&quot;,
+      &quot;email&quot;: &quot;porter81@example.net&quot;,
+      &quot;phone&quot;: &quot;(882) 553-2685 x687&quot;,
+      &quot;website&quot;: &quot;https://www.jones.biz/consequatur-repudiandae-nesciunt-velit-et-eaque&quot;,
+      &quot;address&quot;: &quot;920 Desmond Island\nScarletthaven, SD 06234&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2134&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2134&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?63788&quot;
+        }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;2135&quot;,
+      &quot;first_name&quot;: &quot;Mckenna&quot;,
+      &quot;last_name&quot;: &quot;McDermott&quot;,
+      &quot;gender&quot;: &quot;male&quot;,
+      &quot;dob&quot;: &quot;1926-03-23&quot;,
+      &quot;email&quot;: &quot;lexus63@example.net&quot;,
+      &quot;phone&quot;: &quot;+1-486-229-0322&quot;,
+      &quot;website&quot;: &quot;http://russel.com/aut-et-quae-enim&quot;,
+      &quot;address&quot;: &quot;9679 Damon Garden\nHeidenreichmouth, IL 75175&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;_links&quot;: {
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2135&quot;
+        },
+        &quot;edit&quot;: {
+          &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/2135&quot;
+        },
+        &quot;avatar&quot;: {
+          &quot;href&quot;: &quot;https://lorempixel.com/250/250/people/?69482&quot;
+        }
+      }
+    }
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">assert responseTime &lt; 10000</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match header Server == 'nginx'</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print responseHeaders['Date'][0]</span>
+
+  <span class="lead-duration duration">0.040</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:01:42.961 [print] Sat, 11 Jul 2020 16:01:42 GMT</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print responseCookies</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>16:01:42.962 [print] {
+  &quot;_csrf&quot;: {
+    &quot;name&quot;: &quot;_csrf&quot;,
+    &quot;value&quot;: &quot;7970c038154e6d91529cdb23121447de7cb7d05f25f301570354af9d28315c39a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LbmobON9q7GeSNBfVpVZrK1eA2J1ZdSv%22%3B%7D&quot;,
+    &quot;domain&quot;: &quot;gorest.co.in&quot;,
+    &quot;path&quot;: &quot;/&quot;,
+    &quot;persistent&quot;: &quot;false&quot;,
+    &quot;secure&quot;: &quot;false&quot;
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response._meta.success == true</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.result == '#[20]'</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response.result[*]._links.self.href contains 'https://gorest.co.in/public-api/users/57'</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>com.intuit.karate.exception.KarateException:</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: user-get.feature:25 - path: $.result[*]._links.self.href[*], actual: [&quot;https:\/\/gorest.co.in\/public-api\/users\/2113&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2114&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2115&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2116&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2118&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2119&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2120&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2121&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2122&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2124&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2125&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2126&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2127&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2128&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2129&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2130&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2132&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2133&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2134&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2135&quot;], expected: 'https://gorest.co.in/public-api/users/57', reason: actual value does not contain expected</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>16:01:42.978 assertion failed: path: $.result[*]._links.self.href[*], actual: [&quot;https:\/\/gorest.co.in\/public-api\/users\/2113&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2114&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2115&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2116&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2118&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2119&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2120&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2121&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2122&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2124&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2125&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2126&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2127&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2128&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2129&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2130&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2132&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2133&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2134&quot;,&quot;https:\/\/gorest.co.in\/public-api\/users\/2135&quot;], expected: 'https://gorest.co.in/public-api/users/57', reason: actual value does not contain expected</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response.result[*]..href contains 'https://lorempixel.com/250/250/people/?36504'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

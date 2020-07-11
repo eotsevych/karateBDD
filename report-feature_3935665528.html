@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Feature: examples/users/user-create.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>/home/runner/work/karateBDD/karateBDD</td>
+      <td>11 Jul 2020, 16:01</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">examples/users/user-create.feature</td>
+          <td      class="passed"    >23</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">23</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="4127951839">4.127</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+
+<div class="tags indention">
+</div>
+
+
+<div class="brief passed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">examples/users/user-create.feature</span>
+
+
+</div>
+
+        <div class="description indention">create user</div>
+
+        <div class="elements inner-level">
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">2.953</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">url baseUrl + '/public-api'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def auth = call read('auth.feature')</span>
+
+  <span class="lead-duration duration">1.484</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">examples/users/auth.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def getToken =</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>function(args) {
+  var ResponseParserUtil = Java.type('utils.ResponseParserUtil');
+  var parser = new ResponseParserUtil();
+  return parser.getToken(args);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">path 'rest-console.html'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">1.351</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:01:38.984 request:
+1 &gt; GET https://gorest.co.in/rest-console.html
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_252)
+
+16:01:40.111 response time in milliseconds: 1104.98
+1 &lt; 200
+1 &lt; Cache-Control: no-store, no-cache, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: text/html; charset=UTF-8
+1 &lt; Date: Sat, 11 Jul 2020 16:01:39 GMT
+1 &lt; Expires: Thu, 19 Nov 1981 08:52:00 GMT
+1 &lt; Pragma: no-cache
+1 &lt; Server: nginx
+1 &lt; Set-Cookie: [PHPSESSID=u63cptou9cgl2kf2rm6isao0qp; path=/; HttpOnly, _csrf=f8d41451696023969a3d566a7da660f90b62e4f1516cbd1aa954f8354566b67aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xsnPovT2cl2JRc1gc6e8BkC1um_sO1yn%22%3B%7D; path=/; HttpOnly]
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Frame-Options: sameorigin
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/x-icon&quot; href=&quot;/favicon.ico&quot;&gt;
+    &lt;meta name=&quot;csrf-param&quot; content=&quot;_csrf&quot;&gt;
+&lt;meta name=&quot;csrf-token&quot; content=&quot;s0w3s7e_fWN-7Bpm0bFH64PmPEBSfmBblX6OyQ_xI1XLP1nj2MkpUR2AKCyD0naM4NBZeBAVI2rgE9G6QMBaOw==&quot;&gt;
+    &lt;title&gt;GO REST API Console -  GO REST&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;Try rest api console, supported features includes authentication, rate limiting, response format negotiation (supporting JSON and XML)&quot;&gt;
+&lt;link href=&quot;/css/font-awesome.min.css?v=1559586182&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;/css/site.mini.css?v=1585631720&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;/js/angular.min.js?v=1559743478&quot;&gt;&lt;/script&gt;
+&lt;script&gt;var access_token = &quot;ePoR3hgXN1eum5FNht_nFLLutGkiAJKhTqM4&quot;&lt;/script&gt;&lt;/head&gt;
+&lt;body ng-app=&quot;goRestModule&quot;&gt;
+
+&lt;div class=&quot;wrap&quot;&gt;
+    &lt;div class=&quot;nav-wrap&quot;&gt;
+    &lt;nav id=&quot;w0&quot; class=&quot;navbar navbar-default navbar-fixed-top&quot;&gt;&lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;navbar-header&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#w0-collapse&quot;&gt;&lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;&lt;/button&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;/&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right text-default fa-lg&quot;&gt;&lt;/i&gt;Go Rest&lt;/a&gt;&lt;/div&gt;&lt;div id=&quot;w0-collapse&quot; class=&quot;collapse navbar-collapse&quot;&gt;&lt;ul id=&quot;w1&quot; class=&quot;navbar-nav navbar-right nav&quot;&gt;&lt;li&gt;&lt;a class=&quot;visible-xsd&quot; href=&quot;/chandamama-kathalu.html&quot;&gt;&lt;i class=&quot;fa fa-moon-o gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Chandamama Stories&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;/rest-console.html&quot;&gt;&lt;i class=&quot;fa fa-linux gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Rest Console&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;dropdown&quot;&gt;&lt;a class=&quot;dropdown-toggle&quot; href=&quot;#&quot; data-toggle=&quot;dropdown&quot;&gt;&lt;i class=&quot;fa fa-wrench gutter-sm-right&quot;&gt;&lt;/i&gt;Tools &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;&lt;ul id=&quot;w2&quot; class=&quot;dropdown-menu&quot;&gt;&lt;li&gt;&lt;a href=&quot;/cipher/base64-encode-decode.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Base64 Encode/Decode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/cipher/url-encode-decode.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Url Encode/Decode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/cipher/md5-encrypt.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;MD5 Encrypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/cipher/md5-decrypt.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;MD5 Decrypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/cipher/sha1-hash.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Sha1 Hash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/tools/gcode-translator.html&quot; tabindex=&quot;-1&quot;&gt;&lt;i class=&quot;fa fa-exchange gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;G-Code Translator&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/user/login.html&quot;&gt;&lt;i class=&quot;fa fa-lock gutter-sm-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Login&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/nav&gt;    &lt;/div&gt;
+        
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;clearfix&quot;&gt;
+            &lt;ul class=&quot;breadcrumb&quot;&gt;&lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;active&quot;&gt;GO REST API Console&lt;/li&gt;
+&lt;/ul&gt;        &lt;/div&gt;
+        &lt;div class=&quot;site-index&quot; ng-controller=&quot;restConsole&quot;&gt;
+
+    &lt;div class=&quot;body-content&quot;&gt;
+        &lt;h1&gt;GO REST API Console&lt;/h1&gt;
+
+        &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-sm-6&quot;&gt;
+                &lt;form id=&quot;restform&quot; class=&quot;well form-inline&quot;&gt;
+                    &lt;h4&gt;HTTP request options&lt;/h4&gt;
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;select class=&quot;form-control&quot; ng-model=&quot;request.method&quot;&gt;
+                            &lt;option value=&quot;GET&quot;&gt;GET&lt;/option&gt;
+                            &lt;option value=&quot;POST&quot;&gt;POST&lt;/option&gt;
+                            &lt;option value=&quot;OPTIONS&quot;&gt;OPTIONS&lt;/option&gt;
+                            &lt;option value=&quot;PATCH&quot;&gt;PATCH&lt;/option&gt;
+                            &lt;option value=&quot;DELETE&quot;&gt;DELETE&lt;/option&gt;
+                            &lt;option value=&quot;HEAD&quot;&gt;HEAD&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;input ng-model=&quot;request.url&quot; type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;api url&quot; value=&quot;&quot; /&gt;
+                        &lt;button class=&quot;btn btn-success&quot; type=&quot;button&quot; ng-click=&quot;makeRequest($event)&quot;&gt;
+                            &lt;i class=&quot;fa fa-send gutter-sm-right&quot;&gt;&lt;/i&gt;Send
+                        &lt;/button&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;hr class=&quot;gutter-md&quot; /&gt;
+
+                    &lt;p class=&quot;help-block&quot;&gt;
+                        add additional headers if required.
+                        &lt;button ng-click=&quot;addHeaders($event)&quot; type=&quot;button&quot; class=&quot;btn btn-xs btn-link&quot;&gt;&lt;i class=&quot;fa fa-plus text-success&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;/p&gt;
+                    
+                    &lt;div class=&quot;form-group&quot;&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control gutter-sm-bottom&quot; value=&quot;Authorization&quot; placeholder=&quot;Header name&quot; /&gt;
+                        &lt;input type=&quot;text&quot; ng-model=&quot;request.access_token&quot; class=&quot;form-control gutter-sm-bottom&quot; value=&quot;&quot; /&gt;
+                        &lt;p class=&quot;help-block gutter-sm&quot;&gt;above header is for authentication via &lt;a href=&quot;http://tools.ietf.org/html/rfc6750&quot; target=&quot;_blank&quot;&gt;http bearer tokens&lt;/a&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;form-group gutter-md-bottom&quot; ng-repeat=&quot;(index, header) in request.headers&quot;&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control gutter-sm-bottom&quot; placeholder=&quot;Header name&quot; value=&quot;{{header.name}}&quot; ng-model=&quot;header.name&quot; /&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control gutter-sm-bottom&quot; placeholder=&quot;Header value&quot; value=&quot;{{header.value}}&quot; ng-model=&quot;header.value&quot; /&gt;
+                        &lt;a class=&quot;text-warning&quot; href=&quot;javascript:void(0);&quot; ng-click=&quot;removeHeader($event, index)&quot;&gt;&lt;i class=&quot;fa fa-times fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;hr class=&quot;gutter-md&quot; /&gt;
+                    &lt;p class=&quot;help-block&quot;&gt;
+                        add additional data for post and put requests (data will be sent in body of the request as json string)
+                        &lt;button ng-click=&quot;addData($event)&quot; type=&quot;button&quot; class=&quot;btn btn-xs btn-link&quot;&gt;&lt;i class=&quot;fa fa-plus text-success&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;/p&gt;
+                    
+                    &lt;div class=&quot;form-group gutter-md-bottom&quot; ng-repeat=&quot;(index, data) in request.data&quot;&gt;
+                        &lt;input ng-value=&quot;{{data.name}}&quot; ng-model=&quot;data.name&quot; type=&quot;text&quot; class=&quot;form-control gutter-sm-bottom&quot; placeholder=&quot;name&quot; /&gt;
+                        &lt;input ng-value=&quot;{{data.value}}&quot; ng-model=&quot;data.value&quot; type=&quot;text&quot; class=&quot;form-control gutter-sm-bottom&quot; placeholder=&quot;value&quot; /&gt;
+                        &lt;a href=&quot;javascript:void(0);&quot; ng-click=&quot;removeData($event, index)&quot; type=&quot;button&quot; class=&quot;text-warning&quot;&gt;&lt;i class=&quot;fa fa-times fa-lg&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-sm-6&quot;&gt;
+                &lt;pre class=&quot;alert&quot; ng-class=&quot;request.response.status ? (request.response.status === 200 ? 'alert-success' : 'alert-warning') : ''&quot;&gt;{{ request.response.data._meta.code }} {{request.response.data._meta.message}}&lt;/pre&gt;
+                &lt;pre class=&quot;pre-scrollable&quot; style=&quot;min-height:300px; max-height: 300px;&quot;&gt;{{ request.response.data | json }}&lt;/pre&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+
+&lt;/div&gt;    &lt;/div&gt;
+    
+    &lt;footer class=&quot;footer gutter-lg-top&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;p class=&quot;pull-left gutter-md-right&quot;&gt;&amp;copy; Go Rest 2020&lt;/p&gt;
+            &lt;a class=&quot;pull-right&quot; href=&quot;/contact.html&quot;&gt;Contact Us&lt;/a&gt;
+            &lt;a href=&quot;/privacy-policy.html&quot; class=&quot;pull-right gutter-md-right&quot;&gt;Privacy Policy&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;script src=&quot;/assets/80204261/jquery.min.js?v=1594440071&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/js/public-data/rest-console.js?v=201906032125&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;/assets/d7ddbe0a/js/bootstrap.min.js?v=1594440072&quot;&gt;&lt;/script&gt;    &lt;script type=&quot;text/javascript&quot;&gt;
+        !function(t,e,i,n){var s,o=&quot;autoHidingNavbar&quot;,h=t(e),a=t(i),r=null,u=null,l=70,f=0,d=null,m=h.height(),c=!0,g={disableAutohide:!1,showOnUpscroll:!0,showOnBottom:!0,hideOffset:&quot;auto&quot;,animationDuration:200,navbarOffset:0};function p(e,i){this.element=t(e),this.settings=t.extend({},g,i),this._defaults=g,this._name=o,this.init()}function w(e){c&amp;&amp;(e.element.addClass(&quot;navbar-hidden&quot;).animate({top:-1*parseInt(e.element.css(&quot;height&quot;),10)+e.settings.navbarOffset},{queue:!1,duration:e.settings.animationDuration}),t(&quot;.dropdown.open .dropdown-toggle&quot;,e.element).dropdown(&quot;toggle&quot;),c=!1,e.element.trigger(&quot;hide.autoHidingNavbar&quot;))}function O(t){c||(t.element.removeClass(&quot;navbar-hidden&quot;).animate({top:0},{queue:!1,duration:t.settings.animationDuration}),c=!0,t.element.trigger(&quot;show.autoHidingNavbar&quot;))}function v(t){t.settings.disableAutohide||(f=(new Date).getTime(),function(t){var e=h.scrollTop(),i=e-d;if(d=e,i&lt;0){if(c)return;(t.settings.showOnUpscroll||e&lt;=s)&amp;&amp;O(t)}else if(i&gt;0){if(!c)return void(t.settings.showOnBottom&amp;&amp;e+m===a.height()&amp;&amp;O(t));e&gt;=s&amp;&amp;w(t)}}(t))}p.prototype={init:function(){var t;return this.elements={navbar:this.element},this.setDisableAutohide(this.settings.disableAutohide),this.setShowOnUpscroll(this.settings.showOnUpscroll),this.setShowOnBottom(this.settings.showOnBottom),this.setHideOffset(this.settings.hideOffset),this.setAnimationDuration(this.settings.animationDuration),s=&quot;auto&quot;===this.settings.hideOffset?parseInt(this.element.css(&quot;height&quot;),10):this.settings.hideOffset,t=this,a.on(&quot;scroll.&quot;+o,function(){(new Date).getTime()-f&gt;l?v(t):(clearTimeout(r),r=setTimeout(function(){v(t)},l))}),h.on(&quot;resize.&quot;+o,function(){clearTimeout(u),u=setTimeout(function(){m=h.height()},l)}),this.element},setDisableAutohide:function(t){return this.settings.disableAutohide=t,this.element},setShowOnUpscroll:function(t){return this.settings.showOnUpscroll=t,this.element},setShowOnBottom:function(t){return this.settings.showOnBottom=t,this.element},setHideOffset:function(t){return this.settings.hideOffset=t,this.element},setAnimationDuration:function(t){return this.settings.animationDuration=t,this.element},show:function(){return O(this),this.element},hide:function(){return w(this),this.element},destroy:function(){return a.off(&quot;.&quot;+o),h.off(&quot;.&quot;+o),O(this),t.data(this,&quot;plugin_&quot;+o,null),this.element}},t.fn[o]=function(e){var i,n=arguments;return void 0===e||&quot;object&quot;==typeof e?this.each(function(){t.data(this,&quot;plugin_&quot;+o)||t.data(this,&quot;plugin_&quot;+o,new p(this,e))}):&quot;string&quot;==typeof e&amp;&amp;&quot;_&quot;!==e[0]&amp;&amp;&quot;init&quot;!==e?(this.each(function(){var s=t.data(this,&quot;plugin_&quot;+o);s instanceof p&amp;&amp;&quot;function&quot;==typeof s[e]&amp;&amp;(i=s[e].apply(s,Array.prototype.slice.call(n,1)))}),void 0!==i?i:this):void 0}}(jQuery,window,document);
+        $(function(){$('input[type=&quot;text&quot;]').length&amp;&amp;$('input[type=&quot;text&quot;]').attr(&quot;autocomplete&quot;,&quot;off&quot;),$('[data-toggle=&quot;tooltip&quot;]').length&amp;&amp;$('[data-toggle=&quot;tooltip&quot;]').tooltip({html:!0}),$('[data-toggle=&quot;popover&quot;]').length&amp;&amp;$('[data-toggle=&quot;popover&quot;]').popover({html:!0}),$(&quot;.alert-dismissible&quot;).length&amp;&amp;setTimeout(function(){$(&quot;.alert-dismissible&quot;).slideUp(function(){$(this).remove()})},5e3)});
+        jQuery(&quot;nav.navbar-fixed-top&quot;).autoHidingNavbar({animationDuration:250, showOnUpscroll:true, showOnBottom: false});
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-80146209-1', 'auto');ga('send', 'pageview');
+            &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+16:01:40.126 xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 77; The element type &quot;link&quot; must be terminated by the matching end-tag &quot;&lt;/link&gt;&quot;.</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def result = call getToken response</span>
+
+  <span class="lead-duration duration">0.089</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">print 'Created token - ', result</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>16:01:40.222 [print] Created token -  ePoR3hgXN1eum5FNht_nFLLutGkiAJKhTqM4</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match result == '#notnull'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">header Authorization = 'Bearer ' + auth.result</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">1.174</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">create user</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-6" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-7" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def getEmail =</span>
+
+  <span class="lead-duration duration">0.007</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>function() {
+  var UserData = Java.type('utils.UserData');
+  var data = new UserData();
+  return data.getRandomEmail();
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def userEmail = call getEmail</span>
+
+  <span class="lead-duration duration">0.168</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def params =</span>
+
+  <span class="lead-duration duration">0.006</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>{
+  &quot;first_name&quot;: &quot;karate&quot;,
+  &quot;last_name&quot;: &quot;last&quot;,
+  &quot;gender&quot;: &quot;male&quot;,
+  &quot;email&quot;: '#(userEmail)'
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'users'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">form fields params</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+
+  <span class="lead-duration duration">0.971</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>16:01:40.433 request:
+1 &gt; POST https://gorest.co.in/public-api/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer ePoR3hgXN1eum5FNht_nFLLutGkiAJKhTqM4
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 76
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_252)
+first_name=karate&amp;last_name=last&amp;gender=male&amp;email=osvaldo.blick%40gmail.com
+
+16:01:41.145 response time in milliseconds: 710.80
+1 &lt; 302
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=UTF-8
+1 &lt; Date: Sat, 11 Jul 2020 16:01:41 GMT
+1 &lt; Location: https://gorest.co.in/public-api/users/54093
+1 &lt; Server: nginx
+1 &lt; Set-Cookie: _csrf=4d6afd187579be9c9e40a8b0d9018fb6a8cbe0c9ffef488e402e102aa5a7f8e2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225lRwnoYN_mCAI8luPhAK_0KH8SC4RnH6%22%3B%7D; path=/; HttpOnly
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: Accept
+1 &lt; X-Frame-Options: sameorigin
+1 &lt; X-Rate-Limit-Limit: 30
+1 &lt; X-Rate-Limit-Remaining: 29
+1 &lt; X-Rate-Limit-Reset: 2
+{
+  &quot;_meta&quot;: {
+    &quot;success&quot;: true,
+    &quot;code&quot;: 201,
+    &quot;message&quot;: &quot;A resource was successfully created in response to a POST request. The Location header contains the URL pointing to the newly created resource.&quot;,
+    &quot;rateLimit&quot;: {
+      &quot;limit&quot;: 30,
+      &quot;remaining&quot;: 29,
+      &quot;reset&quot;: 2
+    }
+  },
+  &quot;result&quot;: {
+    &quot;id&quot;: &quot;54093&quot;,
+    &quot;first_name&quot;: &quot;karate&quot;,
+    &quot;last_name&quot;: &quot;last&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;dob&quot;: null,
+    &quot;email&quot;: &quot;osvaldo.blick@gmail.com&quot;,
+    &quot;phone&quot;: null,
+    &quot;website&quot;: null,
+    &quot;address&quot;: null,
+    &quot;status&quot;: null,
+    &quot;_links&quot;: {
+      &quot;self&quot;: {
+        &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/54093&quot;
+      },
+      &quot;edit&quot;: {
+        &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/54093&quot;
+      },
+      &quot;avatar&quot;: {
+        &quot;href&quot;: null
+      }
+    }
+  }
+}
+
+
+16:01:41.150 request:
+2 &gt; GET https://gorest.co.in/public-api/users
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: Bearer ePoR3hgXN1eum5FNht_nFLLutGkiAJKhTqM4
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2 &gt; Cookie: _csrf=4d6afd187579be9c9e40a8b0d9018fb6a8cbe0c9ffef488e402e102aa5a7f8e2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225lRwnoYN_mCAI8luPhAK_0KH8SC4RnH6%22%3B%7D
+2 &gt; Host: gorest.co.in
+2 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_252)
+
+16:01:41.392 response time in milliseconds: 241.11
+2 &lt; 200
+2 &lt; Connection: keep-alive
+2 &lt; Content-Type: application/json; charset=UTF-8
+2 &lt; Date: Sat, 11 Jul 2020 16:01:41 GMT
+2 &lt; Server: nginx
+2 &lt; Set-Cookie: _csrf=041603ca7304120ae549c2971ec016eae0fe2b586ac974784dbdd8c7ba564a9fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228h7iJi16w-05Gx8TwRV05f9A74ZIugSl%22%3B%7D; path=/; HttpOnly
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Vary: [Accept-Encoding, Accept]
+2 &lt; X-Frame-Options: sameorigin
+2 &lt; X-Rate-Limit-Limit: 30
+2 &lt; X-Rate-Limit-Remaining: 28
+2 &lt; X-Rate-Limit-Reset: 4
+{
+  &quot;_meta&quot;: {
+    &quot;success&quot;: true,
+    &quot;code&quot;: 200,
+    &quot;message&quot;: &quot;OK. Everything worked as expected.&quot;,
+    &quot;rateLimit&quot;: {
+      &quot;limit&quot;: 30,
+      &quot;remaining&quot;: 28,
+      &quot;reset&quot;: 4
+    }
+  },
+  &quot;result&quot;: {
+    &quot;id&quot;: &quot;54093&quot;,
+    &quot;first_name&quot;: &quot;karate&quot;,
+    &quot;last_name&quot;: &quot;last&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;dob&quot;: null,
+    &quot;email&quot;: &quot;osvaldo.blick@gmail.com&quot;,
+    &quot;phone&quot;: null,
+    &quot;website&quot;: null,
+    &quot;address&quot;: null,
+    &quot;status&quot;: null,
+    &quot;_links&quot;: {
+      &quot;self&quot;: {
+        &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/54093&quot;
+      },
+      &quot;edit&quot;: {
+        &quot;href&quot;: &quot;https://gorest.co.in/public-api/users/54093&quot;
+      },
+      &quot;avatar&quot;: {
+        &quot;href&quot;: null
+      }
+    }
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response..code contains 200</span>
+
+  <span class="lead-duration duration">0.014</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response..first_name contains 'karate'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response..email contains userEmail</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">match response.result contains params</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
