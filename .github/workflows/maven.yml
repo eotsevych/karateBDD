@@ -15,8 +15,8 @@ jobs:
           java-version: 1.8
       - name: Maven Test
         run: mvn test
-        if : always()
       - name: Download a Build Artifact
+        if : always()
         uses: actions/upload-artifact@v2
         with:
           name: cucumber-report
