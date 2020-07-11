@@ -15,22 +15,16 @@ jobs:
           java-version: 1.8
       - name: Maven Test
         run: mvn test
-
-  job_2:
-    name: Prepate Artifact(s)
-    needs: job_1
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
+        if : alwayd()
       - name: Download a Build Artifact
         uses: actions/upload-artifact@v2
         with:
           name: cucumber-report
           path: target/cucumber-html-reports
 
-  job_3:
+  job_2:
     name: Deploy report page
-    needs: job_2
+    needs: job_1
     if: always()
     runs-on: ubuntu-latest
     steps:
