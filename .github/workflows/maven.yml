@@ -19,6 +19,7 @@ jobs:
   job_2:
     name: Prepate Artifact(s)
     needs: job_1
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Download a Build Artifact
@@ -30,6 +31,7 @@ jobs:
   job_3:
     name: Deploy report page
     needs: job_1
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: Prepate Cucumber Report
