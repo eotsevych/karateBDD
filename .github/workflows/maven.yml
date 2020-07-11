@@ -34,6 +34,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Prepate Cucumber Report
         uses: peaceiris/actions-gh-pages@v3
         with:
