@@ -1,8 +1,10 @@
 Feature: get users
+
   Background:
     * url baseUrl + '/public-api'
     * def auth = call read('auth.feature')
     * header Authorization = 'Bearer ' + auth.result
+
   Scenario: get users
     # path 'documents/' + documentId is equivalent to path 'documents', documentId,
     Given path 'users'
@@ -18,8 +20,8 @@ Feature: get users
     * print responseCookies
     And match response._meta.success == true
     # Check array size via 'match' and '==' and '#[expected_size]'
-    #And match response.result == '#[20]'
+    And match response.result == '#[20]'
     # Check for any node in array -> [*]
-    # Then match response.result[*]._links.self.href contains 'https://gorest.co.in/public-api/users/57'
+    Then match response.result[*]._links.self.href contains 'https://gorest.co.in/public-api/users/57'
     # Check matches nodes at any depth -> ..
-    # Then match response.result[*]..href contains 'https://lorempixel.com/250/250/people/?36504'
+    Then match response.result[*]..href contains 'https://lorempixel.com/250/250/people/?36504'
