@@ -15,7 +15,7 @@ jobs:
       - name: Build Maven
         run: mvn -B package --file pom.xml
       - name: Download a Build Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: cucumber-report
           path: target/cucumber-html-reports
