@@ -13,7 +13,7 @@ jobs:
       with:
         java-version: 1.8
     - name: Build Maven
-      run: mvn -B package --file pom.xml
+      run: mvn test
       if: always()
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2
