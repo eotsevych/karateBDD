@@ -19,3 +19,7 @@ jobs:
         with:
           name: cucumber-report
           path: target/cucumber-html-reports
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2.1.0
+        with:
+          build_dir: target/cucumber-html-reports
