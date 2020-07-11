@@ -37,6 +37,6 @@ jobs:
         with:
           force_orphan: true
           github_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_dir: cucumber-report/target/cucumber-html-reports
+          publish_dir: ./cucumber-report/target/cucumber-html-reports
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
