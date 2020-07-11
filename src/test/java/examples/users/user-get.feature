@@ -18,7 +18,7 @@ Feature: get users
     * print responseCookies
     And match response._meta.success == true
     # Check array size via 'match' and '==' and '#[expected_size]'
-    And match response.result == '#[20]'
+    #And match response.result == '#[20]'
     # Check for any node in array -> [*]
     # Then match response.result[*]._links.self.href contains 'https://gorest.co.in/public-api/users/57'
     # Check matches nodes at any depth -> ..
