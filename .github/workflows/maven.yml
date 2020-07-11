@@ -15,7 +15,7 @@ jobs:
           java-version: 1.8
       - name: Maven Test
         run: mvn test
-        if : alwayd()
+        if : always()
       - name: Download a Build Artifact
         uses: actions/upload-artifact@v2
         with:
