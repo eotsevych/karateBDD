@@ -14,10 +14,13 @@ jobs:
         java-version: 1.8
     - name: Build Maven
       run: mvn test
-      if: always()
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v2
-      with:
-        name: cucumber-report
-        path: target/cucumber-html-reports
+
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download a Build Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: cucumber-report
+          path: target/cucumber-html-reports
       
