@@ -37,6 +37,7 @@ jobs:
       - name: Prepate Cucumber Report
         uses: peaceiris/actions-gh-pages@v3
         with:
+          forceOrphan: true
           github_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./target/cucumber-html-reports
           user_name: 'github-actions[bot]'
