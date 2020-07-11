@@ -34,8 +34,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - name: Download math result for job 1
-      - uses: actions/download-artifact@v1
+      - name: Download result from from job 1
+        uses: actions/download-artifact@v2
         with:
           name: cucumber-report
       - name: Prepate Cucumber Report
