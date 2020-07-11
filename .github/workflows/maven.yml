@@ -15,6 +15,14 @@ jobs:
           java-version: 1.8
       - name: Maven Test
         run: mvn test
+        if: always()
+      - name: Prepate Cucumber Report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./target/cucumber-html-reports
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
 
   job_2:
     name: Prepate Artifact(s)
@@ -27,19 +35,3 @@ jobs:
         with:
           name: cucumber-report
           path: target/cucumber-html-reports
-
-  job_3:
-    name: Deploy report page
-    needs: job_1
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Prepate Cucumber Report
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_dir: ./target/cucumber-html-reports
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
